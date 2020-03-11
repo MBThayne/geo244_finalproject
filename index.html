@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Multnomah County Libraries
+    </title>
+    <link rel="stylesheet" href="./main.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+    <!-- Mapbox GL -->
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js'></script>
+
+    <!--   Leaflet Mapbox-GL This is experimental -->
+    <script src="https://unpkg.com/mapbox-gl-leaflet/leaflet-mapbox-gl.js"></script>
+
+</head>
+
+<body>
+    <div class="app-container">
+        <div class="nav-container">
+
+            <div>
+                <img id="logo" src="https://multcolib.org/sites/all/themes/multco_lib/images/library-logo.svg" />
+            </div>
+            <div id="logo-name">"The Busiest Library in the Nation"</div>
+            <div id="spacer"></div>
+            <div><a href="http://www.multcolib.org">Find a Book</a>
+            </div>
+            <div><a href="http://www.multcolib.org/events">Events</a>
+            </div>
+
+        </div>
+        <div class="map-container">
+            <div id="map"></div>
+        </div>
+        <div class="side-pane-container">
+            <div class="side-pane-container">
+
+                <div id="side-pane-title">Multnomah County Library System</div>
+                <!--                <div id="map-legend"></div>-->
+
+                <div>
+                    Multnomah County Library is the public library system serving Portland and Multnomah County, Oregon. A continuation of the Library Association of Portland, established in 1864, the system now has <strong>19 branches</strong>. It is the largest library system in Oregon, serving a population of 724,680 with more than <strong>425,000 registered borrowers</strong>. According to the Public Library Association, it ranks second among U.S. libraries, based on circulation of books, materials, and <strong>ranks first among libraries serving fewer than one million residents.</strong>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="./map.js"></script>
+</body>
+
+</html>

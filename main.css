@@ -1,0 +1,173 @@
+/* Boilerplate */
+html {
+    /* include border and padding in width and height */
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+img {
+    /* images responsive*/
+    max-width: 80%;
+    height: auto;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    /* set the margin to 0, 100 vert height, no scrollbar */
+    margin: 0 auto;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Create the basic layout */
+.app-container {
+    display: grid;
+    /*    3 cols*/
+    grid-template-columns: 250px 1fr 1fr;
+    /*    3 rows*/
+    grid-template-rows: 55px 1fr 1fr;
+    grid-gap: 5px;
+    height: calc(100% - 10px);
+    margin: 5px;
+}
+
+a:link {
+    color: black;
+}
+a:visited {
+    color: black;
+}
+a {
+    text-decoration: none;
+}
+
+.nav-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    background-color: #efefef;
+    /*    border: 1px solid #585858;*/
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-container > div {
+    padding: 10px;
+}
+
+#spacer {
+    flex: 1;
+}
+
+#logo {
+    height: 50px;
+    margin-left: 5px;
+}
+
+#logo-name {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/*
+.nav-container a:not(:first-child):hover{
+    background-color: white !important;
+}
+.nav-container a:last-child {
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .nav-container a:not(first-child) {
+        display: none;
+        .nav-container a:last-child {
+            display: flex;
+            font-size: 30px;
+        }
+        .navbar a:last-child:hover{
+            background-color: transparent !important;
+        }
+    }
+}
+*/
+.map-container {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    /*    keep */
+    grid-row-start: 2;
+    grid-row-end: 4;
+    /*    border: 1px solid #585858;*/
+    border-radius: 4px;
+}
+
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+.side-pane-container {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    background-color: #efefef;
+    /*    border: 1px solid #585858;*/
+    border-radius: 4px;
+    / display: flex;
+    flex-direction: column;
+    line-height: 125%;
+    overflow: auto;
+    font-family: 'Montserrat', sans-serif;
+    width: 250px;
+    z-index: 2000;
+}
+
+.side-pane-container > div {
+    text-align: justify;
+    align-items: center;
+    padding: 10px;
+}
+
+.side-pane-container > div > img {
+    box-shadow: 2px 6px 8px #888888;
+    border-radius: 10px;
+    justify-content: center;
+    text-align: center;
+}
+
+#side-pane-title {
+    font-size: 1.3em;
+    text-align: center;
+    font-weight: 700;
+    height: auto;
+}
+
+/*
+	#map-legend {  
+	  min-height: 45px;  
+	  text-align: center;  
+	  font-family: 'Montserrat', sans-serif;  
+*/
+}
+}
+
+/* end of basic layout */
+.popup {
+    max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+    .side-pane-container {
+        width: 0px;
+    }
+}
+/*@media screen and (max-width:600px) {
+#menu_btn {display: inline-block;}
+@ media screen and (min-width: 600px) {
+#menu_btn {display: none;}*/
